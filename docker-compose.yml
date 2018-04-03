@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  phoenix:
+    # tell docker-compose which Dockerfile it needs to build
+    build:
+      context: .
+      dockerfile: Dockerfile.development
+    # set environmet
+    environment:
+          - MIX_ENV=dev
+    # map the port of phoenix to the local dev port
+    ports:
+      - "4000:4000"
+
+# create a named datavolume
+volumes:
+    db_data:
