@@ -1,2 +1,2 @@
-# Docker-Elixir-Enviroment
-Environment for start a Elixir proyect.
+# Docker-Elixir-Phoenix-Enviroment
+Environment for starting a Elixir proyect.
