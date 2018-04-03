@@ -11,6 +11,7 @@ WORKDIR /app
 
 # install dependencies
 RUN mix deps.get
+RUN mix local.rebar --force
 
 # run phoenix in *dev* mode on port 4000
 CMD mix phoenix.server
