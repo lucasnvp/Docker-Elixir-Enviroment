@@ -3,6 +3,7 @@ FROM elixir:1.6.4
 
 # install hex package manager
 RUN mix local.hex --force
+RUN mix local.rebar --force
 
 # create app folder
 RUN mkdir /app
@@ -11,7 +12,6 @@ WORKDIR /app
 
 # install dependencies
 RUN mix deps.get
-RUN mix local.rebar --force
 
 # run phoenix in *dev* mode on port 4000
 CMD mix phx.server
